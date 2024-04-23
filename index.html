@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>LOJA DE GAMES STEAM</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" id="home-link">Home</a></li>
+                    <li><a href="#" id="contact-link">Contato</a></li>
+                    <li><a href="#" id="about-link" onclick="window.open('https://store.steampowered.com/')">Loja</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<center>
+    <div class="main-content">
+        <h2>Red Dead Redemption 2</h2>
+        <p>Red Dead Redemption 2, a épica aventura de mundo aberto da Rockstar Games aclamada pela crítica e o jogo mais bem avaliado desta geração de consoles,
+           agora chega aprimorado para PC com conteúdos inéditos no Modo História, melhorias visuais e muito mais.</p>
+        <p>Atalhos de teclado: <strong>CTRL + Q</strong> para direcionar para Loja Online, <strong>CTRL + I</strong> para acessar o link original da imagem e <strong>CTRL + M</strong> para acessar a área de mensagem.</p>
+        <a href="#" id="image-link" onclick="window.open('https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/')"> <img src="img1.jpeg" alt="Imagem" width="420"></a>
+        <br><br>
+        <input type="text" id="message-input" placeholder="Digite sua mensagem">
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+</center>
+    <footer>
+        Desenvolvido por: Alexandre Gabriel de Almeida Silva Nogueira
+    </footer>
+    <script>
+        // Script para atalhos de teclado
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.key === 'q') {
+                window.location.href = 'https://store.steampowered.com/';
+            } else if (event.ctrlKey && event.key === 'i') {
+                window.open('https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/');
+            } else if (event.ctrlKey && event.key === 'm') {
+                document.getElementById('message-input').focus();
+            }
+        });
+
+        function sendMessage() {
+            var message = document.getElementById('message-input').value;
+            // Aqui você pode adicionar o código para enviar a mensagem
+            alert('Mensagem enviada: ' + message);
+        }
+    </script>
+
+
+</body>
+</html>
